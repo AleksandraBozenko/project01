@@ -23,103 +23,108 @@ h2{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #122656;
-  color: white;
   &__title{
     margin: 0;
     padding: 1.5rem;
     letter-spacing: .3rem;
   }
-  &__portrait{
+  &__image{
+    @include center;
+    &--portrait{
     width: 90vw;
     height: 65vw;
-  }
-  &__description{
-    padding: 0 2rem;
-    font-size: 1.2rem;
-    &--text{
-      padding: 2rem;
-      text-align: center;
-      // border-bottom: 1px solid white;
-      background-color: white;
-      color: #122656;
     }
   }
-  &__socials{
+  &__description{
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    &--text{
+      padding: 1.5rem .5rem;
+      text-align: center;
+      color: black;
+    }
+  }
+  &__contact{
     width: 100%;
-          display: flex;
-
+    @include center;
+    flex-direction: column;
+  }
+  &__form{
+    @include center;
+    flex-direction: column;
+    padding: 10px;
     &--box{
-      margin: 1rem;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      width: 3rem;
-      height: 3rem;
-      background-color: white;
-      border-radius: 50%;
-      &-icon{
-        width: 100%;
-        height: 100%;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 30px;
+      &-label{
+        font-size: 1.1em;
+      }
+      &-input{
+        border: none;
+        background: none;
+        border-bottom: 1px solid black;
+        margin: 20px 0;
+        padding: 5px;
+        font-size: 1em;
+      }
+    }
+    &--button{
+      background: black;
+      border: 1px solid black;
+      padding: 10px;
+      width: 130px;
+      &-text{
+        letter-spacing: 3px;
+        font-size: 1.3em;
+        margin: 0;
+        color: white;
       }
     }
   }
+ 
 }
-.section:nth-child(even){
-  background-color: white;
-  color: #122656;
+// .section:nth-child(even){
+//   background-color: white;
+//   color: #122656;
+// }
+.section__description--text:nth-child(even){
+  border-right: .2rem solid #122656;
+}
+.section__description--text:nth-child(odd){
+  border-left: .2rem solid #122656;
 }
 
-// @media(min-width: 700px){
-  // .section{
-  // width: 100%;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: column;
-  // background-color: #122656;
-  // color: white;
-  // &__title{
-  //   margin: 0;
-  //   padding: 2rem;
-  //   letter-spacing: .3rem;
-  // }
-  // &__description{
-  //   padding: 0 3rem;
-  //   display: flex;
-  //   flex-direction: row;
-    // &--text{
-    //   padding: .9rem;
-    //   text-align: center;
-    //   border-bottom: 1px solid #334061;
-    // }
-  // }
-  // &__socials{
-    // width: 100%;
-    // flex-direction: row;
+// Mediaqueries
+
+@media(min-width: 700px){
+  .section{
+  &__description{
+    padding: 0 10rem;
     // display: flex;
-    // &--box{
-      // margin: 2rem;
-      // flex-direction: row;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // width: 5rem;
-      // height: 5rem;
-      // background-color: white;
-      // border-radius: 50%;
-      // &-icon{
-      //   width: 100%;
-      //   height: 100%;
-      // }
-    // }
-  // }
-// }
-// }
+    // flex-direction: row;
+    &--text{
+      padding: 2rem;
+    }
+  }
+  &__image{
+    &--portrait{
+    width: 30vw;
+    height: 25vw;
+  }
+}
+}
+.section__description--text:nth-child(even){
+  border-right: .2rem solid #3F7477;
+}
+.section__description--text:nth-child(odd){
+  border-left: .2rem solid #3F7477;
+}
+}
 
 
-
+// Gallery
 
 img.hover-shadow {
   transition: all 0.3s; }
@@ -295,3 +300,28 @@ img.hover-shadow {
     .prev:hover,
     .next:hover {
       background-color: transparent; } }
+
+
+
+
+
+       // &__socials{
+  //   width: 100%;
+  //         display: flex;
+
+  //   &--box{
+  //     margin: 1rem;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     flex-direction: row;
+  //     width: 3rem;
+  //     height: 3rem;
+  //     background-color: white;
+  //     border-radius: 50%;
+  //     &-icon{
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+  //   }
+  // }

@@ -33,7 +33,9 @@
     <main class="main">
       <section class="section">
         <h2 class="section__title">JAN NOWAK<h2>
-          <img class="section__portrait" src="/assets/img/portrait.jpg" alt="portrait photo">
+          <div class="section__image">
+          <img class="section__image--portrait" src="/assets/img/portrait.jpg" alt="portrait photo">
+        </div>
           <div class="section__description">
             <p class="section__description--text">
               Jeśli Twoja firma organizuje event, to fotoreportaż w moim wykonaniu jest strzałem w dziesiątkę! Uwiecznimy profesjonalizm Twojej firmy, dynamikę wydarzeń oraz zadowolenie gości.
@@ -124,30 +126,30 @@
           <div class="column">
             <img
               class="demo"
-              src="https://i.ibb.co/8M2XWTz/henry-co-3co-Kbdfn-AFg-unsplash.jpg"
+              src="/assets/img/portrait.jpg"
               alt="Snow"
             />
           </div>
 
           <div class="column">
-            <img class="demo" src="https://i.ibb.co/R2NSmwm/bath-img-Desktop.jpg" alt="Mountains" />
+            <img class="demo" src="/assets/img/portrait.jpg" alt="Mountains" />
           </div>
 
           <div class="column">
             <img
               class="demo"
-              src="https://i.ibb.co/8M2XWTz/henry-co-3co-Kbdfn-AFg-unsplash.jpg"
+              src="/assets/img/portrait.jpg"
               alt="Lights"
             />
           </div>
 
           <div class="column">
-            <img class="demo" src="https://i.ibb.co/R2NSmwm/bath-img-Desktop.jpg" alt="Mountains" />
+            <img class="demo" src="/assets/img/portrait.jpg" alt="Mountains" />
           </div>
           <div class="column">
             <img
               class="demo"
-              src="https://i.ibb.co/8M2XWTz/henry-co-3co-Kbdfn-AFg-unsplash.jpg"
+              src="/assets/img/portrait.jpg"
               alt="Lights"
             />
           </div>
@@ -157,20 +159,42 @@
       </section>
       <section class="section">
         <h2 class="section__title">KONTAKT<h2>
-          <div class="section__socials">
-            <div class="section__socials--box">
-              <img class="section__socials--box-icon" src="#" alt="social icon">
+          <div class="section__contact">
+          <form class="section__form" id="myform" method="post">
+            <div class="section__form--box">
+             <label class="section__form--box-label">email:</label>
+             <input class="section__form--box-input" type="text" name="email" />
+             <label class="section__form--box-label">message:</label>
+             <input class="section__form--box-input" type="text" name="text" />
             </div>
-            <div class="section__socials--box">
-              <img class="section__socials--box-icon" src="#" alt="social icon">
-            </div>
-            <div class="section__socials--box">
-              <img class="section__socials--box-icon" src="#" alt="social icon">
-            </div>
+            <button class="section__form--button">
+              <p class="section__form--button-text">wyślij</p>
+            </button>
+
+            </form>
           </div>
+          <!-- <div class="section__socials">
+            <div class="section__socials--box">
+              <img class="section__socials--box-icon" src="#" alt="social icon">
+            </div>
+            <div class="section__socials--box">
+              <img class="section__socials--box-icon" src="#" alt="social icon">
+            </div>
+            <div class="section__socials--box">
+              <img class="section__socials--box-icon" src="#" alt="social icon">
+            </div>
+          </div> -->
       </section>    
     </main>
 
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_T3DKGFSqqg6PPOzWMW2M8");
+   })();
+</script>
     <script src="js/main.js"></script>
   </body>
 </html>
